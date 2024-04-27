@@ -1,0 +1,16 @@
+name: devops_cicd
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  show_name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Run Bash Script
+        run: bash show_name.sh
